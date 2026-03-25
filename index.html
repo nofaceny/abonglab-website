@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abonglab - Legal</title>
+    <title>Abonglab - Building the Future of AI Apps</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Magical cursor trail -->
@@ -13,11 +16,17 @@
     <!-- Floating particles -->
     <div class="particles" id="particles"></div>
 
+    <!-- 3D Scene Background -->
+    <div class="scene-bg">
+        <div class="scene-plane"></div>
+        <div class="scene-grid"></div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="brand-icon">✨</span>
+                <div class="logo-mark">A</div>
                 <span class="logo-text">Abonglab</span>
             </div>
             <div class="nav-links">
@@ -31,29 +40,51 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <!-- 3D floating geometry -->
+        <div class="geo geo-1"></div>
+        <div class="geo geo-2"></div>
+        <div class="geo geo-3"></div>
+        <div class="geo geo-4"></div>
+
         <div class="hero-content">
-            <div class="magic-circle">
-                <div class="circle-inner"></div>
-                <div class="circle-outer"></div>
+            <div class="hero-badge scroll-reveal">
+                <span class="badge-dot"></span>
+                Two apps · One vision
             </div>
 
-            <h1 class="hero-title">
-                <span class="sparkle">✨</span>
-                Welcome to Abonglab
-                <span class="sparkle">✨</span>
+            <h1 class="hero-title scroll-reveal">
+                We Build Apps<br>
+                <span class="gradient-text">People Love</span>
             </h1>
 
-            <p class="hero-subtitle">Building the Future of Mobile Innovation</p>
+            <p class="hero-subtitle scroll-reveal">
+                Abonglab crafts innovative experiences — from ancient Korean astrology to modern market intelligence.
+            </p>
 
-            <div class="cta-buttons">
-                <a href="privacy.html" class="btn btn-primary magic-wand" data-text="Privacy Policy">
-                    <span class="btn-icon">🔒</span>
-                    <span class="btn-text">Privacy Policy</span>
+            <div class="cta-buttons scroll-reveal">
+                <a href="#apps" class="btn btn-primary magic-wand smooth-scroll">
+                    <span class="btn-text">Explore Our Apps</span>
+                    <span class="btn-arrow">↓</span>
                 </a>
-                <a href="terms.html" class="btn btn-secondary magic-wand" data-text="Terms of Service">
-                    <span class="btn-icon">📜</span>
-                    <span class="btn-text">Terms of Service</span>
+                <a href="mailto:hello@abonglab.com" class="btn btn-ghost">
+                    <span class="btn-text">Get in Touch</span>
                 </a>
+            </div>
+
+            <!-- Floating metric cards -->
+            <div class="hero-stats scroll-reveal">
+                <div class="stat-card">
+                    <span class="stat-number">2</span>
+                    <span class="stat-label">Apps</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">AI</span>
+                    <span class="stat-label">Powered</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Insight</span>
+                </div>
             </div>
         </div>
 
@@ -64,66 +95,203 @@
     </section>
 
     <!-- Apps Section -->
-    <section class="cards-section" id="apps">
+    <section class="apps-section" id="apps">
         <div class="container">
-            <h2 class="section-title">
-                <span class="magic-text">Our Apps</span>
-            </h2>
+            <div class="section-header scroll-reveal">
+                <span class="section-eyebrow">Our Products</span>
+                <h2 class="section-title">
+                    <span class="gradient-text">Two Apps.</span><br>Built for Real Life.
+                </h2>
+                <p class="section-desc">Each app is built with AI at its core, solving problems that matter to people every day.</p>
+            </div>
 
-            <div class="cards-grid">
-                <div class="card" data-tilt>
-                    <div class="card-icon">📈</div>
-                    <h3 class="card-title">Stockwitch</h3>
-                    <p class="card-description">
-                        AI-powered stock market insights and analysis.
-                        Professional insights, simple guidance for modern investors.
-                    </p>
-                    <div class="card-badge">Available Now</div>
-                    <div class="card-glow"></div>
+            <!-- Sajuma App Card -->
+            <div class="app-card app-card--sajuma scroll-reveal" data-tilt>
+                <div class="app-card__inner">
+                    <div class="app-card__content">
+                        <div class="app-tag app-tag--web">Web App</div>
+                        <div class="app-icon-wrap">
+                            <div class="app-icon app-icon--sajuma">🔮</div>
+                            <div class="app-icon-glow app-icon-glow--sajuma"></div>
+                        </div>
+                        <h3 class="app-title">Sajuma</h3>
+                        <p class="app-tagline">Your Korean fortune guide</p>
+                        <p class="app-desc">
+                            Sajuma brings the ancient wisdom of 사주 (Four Pillars of Destiny) into the modern era. Get personalized destiny readings, compatibility analysis, and daily fortunes — all powered by AI trained on centuries of Korean astrology.
+                        </p>
+                        <ul class="app-features">
+                            <li><span class="feat-icon">🔮</span> <strong>사주 풀이</strong> — Deep destiny readings from your birth date & time</li>
+                            <li><span class="feat-icon">💕</span> <strong>궁합 해설</strong> — Compatibility scores for couples</li>
+                            <li><span class="feat-icon">✨</span> <strong>일일운세</strong> — Free daily fortune readings</li>
+                            <li><span class="feat-icon">🌊</span> <strong>대운 분석</strong> — Major life cycle forecasting</li>
+                            <li><span class="feat-icon">💬</span> <strong>AI Chat</strong> — Conversational saju guidance</li>
+                        </ul>
+                        <div class="app-cta">
+                            <a href="https://sajuma.app" class="btn btn-sajuma" target="_blank" rel="noopener">
+                                <span>Visit Sajuma</span>
+                                <span class="btn-arrow">→</span>
+                            </a>
+                            <span class="app-availability">Available on Web · Free to start</span>
+                        </div>
+                    </div>
+                    <div class="app-card__visual app-card__visual--sajuma">
+                        <div class="phone-mockup phone-mockup--web">
+                            <div class="phone-screen">
+                                <div class="mock-header">
+                                    <div class="mock-logo">🔮 Sajuma</div>
+                                </div>
+                                <div class="mock-services">
+                                    <div class="mock-service-card" style="--c: #7C3FE4">
+                                        <span>🔮</span>
+                                        <span>사 주</span>
+                                        <span class="mock-badge">인기</span>
+                                    </div>
+                                    <div class="mock-service-card" style="--c: #FF4488">
+                                        <span>💕</span>
+                                        <span>궁 합</span>
+                                    </div>
+                                    <div class="mock-service-card" style="--c: #0088CC">
+                                        <span>✨</span>
+                                        <span>운세</span>
+                                        <span class="mock-badge mock-badge--free">무료</span>
+                                    </div>
+                                    <div class="mock-service-card" style="--c: #CC8800">
+                                        <span>🌊</span>
+                                        <span>대 운</span>
+                                        <span class="mock-badge mock-badge--new">NEW</span>
+                                    </div>
+                                </div>
+                                <div class="mock-chat">
+                                    <div class="mock-bubble mock-bubble--ai">오늘의 운세를 알려드릴게요 ✨</div>
+                                    <div class="mock-bubble mock-bubble--user">궁합도 봐줘!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="app-card__glow app-card__glow--sajuma"></div>
+            </div>
 
-                <div class="card" data-tilt>
-                    <div class="card-icon">🚀</div>
-                    <h3 class="card-title">Coming Soon</h3>
-                    <p class="card-description">
-                        More innovative apps are on the way.
-                        Stay tuned for exciting new products from Abonglab.
-                    </p>
-                    <div class="card-badge badge-secondary">In Development</div>
-                    <div class="card-glow"></div>
+            <!-- Stockwitch App Card -->
+            <div class="app-card app-card--stockwitch scroll-reveal" data-tilt>
+                <div class="app-card__inner app-card__inner--reverse">
+                    <div class="app-card__content">
+                        <div class="app-tag app-tag--soon">Coming Soon</div>
+                        <div class="app-icon-wrap">
+                            <div class="app-icon app-icon--stockwitch">📈</div>
+                            <div class="app-icon-glow app-icon-glow--stockwitch"></div>
+                        </div>
+                        <h3 class="app-title">Stockwitch</h3>
+                        <p class="app-tagline">Stock market intelligence, reimagined</p>
+                        <p class="app-desc">
+                            Stockwitch turns the noise of financial markets into clear, actionable signals. Smart insights, community sentiment, and personalized stock tracking — all in one elegant mobile experience. Launching on iOS soon.
+                        </p>
+                        <ul class="app-features">
+                            <li><span class="feat-icon">📊</span> <strong>Market Signals</strong> — Intelligent insights on stocks & breaking news</li>
+                            <li><span class="feat-icon">📰</span> <strong>News Aggregation</strong> — Curated market news in one clean feed</li>
+                            <li><span class="feat-icon">👥</span> <strong>Community</strong> — Discuss stocks with real investors</li>
+                            <li><span class="feat-icon">🔔</span> <strong>Smart Alerts</strong> — Push notifications for signals that matter</li>
+                            <li><span class="feat-icon">⭐</span> <strong>Stock Tracker</strong> — Personalized watchlists & analysis</li>
+                        </ul>
+                        <div class="app-disclaimer">
+                            <span class="disclaimer-icon">⚠️</span>
+                            Informational only — not financial advice. Always do your own research.
+                        </div>
+                        <div class="app-cta">
+                            <div class="btn btn-stockwitch btn-disabled">
+                                <span class="apple-logo"></span>
+                                <span>Coming to App Store</span>
+                            </div>
+                            <span class="app-availability">iOS · Launching soon</span>
+                        </div>
+                    </div>
+                    <div class="app-card__visual app-card__visual--stockwitch">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <div class="mock-header">
+                                    <div class="mock-logo" style="color:#a78bfa">📈 Stockwitch</div>
+                                </div>
+                                <div class="mock-chart">
+                                    <svg viewBox="0 0 200 80" class="chart-svg">
+                                        <defs>
+                                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.4"/>
+                                                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <path d="M0,60 L20,50 L40,55 L60,35 L80,40 L100,25 L120,30 L140,15 L160,20 L180,10 L200,5" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+                                        <path d="M0,60 L20,50 L40,55 L60,35 L80,40 L100,25 L120,30 L140,15 L160,20 L180,10 L200,5 L200,80 L0,80Z" fill="url(#chartGrad)"/>
+                                    </svg>
+                                    <div class="mock-ticker">
+                                        <span class="ticker-symbol">AAPL</span>
+                                        <span class="ticker-price">$189.42</span>
+                                        <span class="ticker-change">+2.3% 🔮</span>
+                                    </div>
+                                </div>
+                                <div class="mock-signals">
+                                    <div class="mock-signal mock-signal--bull">🟢 Bullish Signal · High Confidence</div>
+                                    <div class="mock-signal mock-signal--news">📰 3 new articles · NVDA sentiment positive</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="app-card__glow app-card__glow--stockwitch"></div>
+            </div>
+        </div>
+    </section>
 
-                <div class="card" data-tilt>
-                    <div class="card-icon">💡</div>
-                    <h3 class="card-title">Innovation First</h3>
-                    <p class="card-description">
-                        We build products that solve real problems.
-                        Quality, user experience, and innovation drive everything we do.
-                    </p>
-                    <div class="card-badge badge-accent">Our Mission</div>
-                    <div class="card-glow"></div>
+    <!-- About / Mission Section -->
+    <section class="mission-section scroll-reveal">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-text">
+                    <span class="section-eyebrow">About Abonglab</span>
+                    <h2 class="section-title">AI at the core.<br><span class="gradient-text">Humans at the center.</span></h2>
+                    <p>We're a small team that believes technology should feel magical. We build apps at the intersection of AI and human curiosity — whether that's ancient wisdom meeting modern algorithms, or financial data becoming clear insight.</p>
+                    <p>Every Abonglab product is built with care, crafted for the people who use it.</p>
+                    <a href="mailto:hello@abonglab.com" class="btn btn-ghost" style="margin-top:1.5rem">
+                        Say hello →
+                    </a>
+                </div>
+                <div class="mission-values">
+                    <div class="value-card" data-tilt>
+                        <div class="value-icon">🤖</div>
+                        <h4>AI-First</h4>
+                        <p>Every feature is powered by machine learning and large language models trained for precision.</p>
+                    </div>
+                    <div class="value-card" data-tilt>
+                        <div class="value-icon">🎨</div>
+                        <h4>Design-Led</h4>
+                        <p>Beautiful, intuitive interfaces that make complex information feel simple and delightful.</p>
+                    </div>
+                    <div class="value-card" data-tilt>
+                        <div class="value-icon">🔒</div>
+                        <h4>Privacy-Aware</h4>
+                        <p>We handle your data responsibly and transparently. See our <a href="privacy.html">Privacy Policy</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Info Cards -->
-    <section class="cards-section">
+    <!-- Legal Section -->
+    <section class="cards-section scroll-reveal">
         <div class="container">
-            <h2 class="section-title">
-                <span class="magic-text">Legal Documentation</span>
-            </h2>
+            <div class="section-header">
+                <span class="section-eyebrow">Legal</span>
+                <h2 class="section-title"><span class="gradient-text">Transparency</span> First</h2>
+            </div>
 
             <div class="cards-grid">
                 <div class="card" data-tilt>
                     <div class="card-icon">🔒</div>
                     <h3 class="card-title">Privacy Policy</h3>
                     <p class="card-description">
-                        Learn how we protect your data and respect your privacy across all Abonglab apps.
-                        Your information is encrypted and never sold.
+                        How we collect, use, and protect your data across all Abonglab apps — including Sajuma and Stockwitch.
                     </p>
                     <a href="privacy.html" class="card-link">
-                        Read More <span class="arrow">→</span>
+                        Read Policy <span class="arrow">→</span>
                     </a>
                     <div class="card-glow"></div>
                 </div>
@@ -132,24 +300,22 @@
                     <div class="card-icon">⚖️</div>
                     <h3 class="card-title">Terms of Service</h3>
                     <p class="card-description">
-                        Understand your rights and responsibilities when using our apps.
-                        Clear, fair terms that apply to all Abonglab products.
+                        Your rights and responsibilities when using Sajuma, Stockwitch, and any future Abonglab product.
                     </p>
                     <a href="terms.html" class="card-link">
-                        Read More <span class="arrow">→</span>
+                        Read Terms <span class="arrow">→</span>
                     </a>
                     <div class="card-glow"></div>
                 </div>
 
                 <div class="card" data-tilt>
-                    <div class="card-icon">🌐</div>
+                    <div class="card-icon">✉️</div>
                     <h3 class="card-title">Contact Us</h3>
                     <p class="card-description">
-                        Questions, feedback, or support inquiries?
-                        We're here to help. Reach out anytime.
+                        Questions, feedback, privacy requests, or support — we're a small team and we actually respond.
                     </p>
                     <a href="mailto:hello@abonglab.com" class="card-link">
-                        Get in Touch <span class="arrow">→</span>
+                        hello@abonglab.com <span class="arrow">→</span>
                     </a>
                     <div class="card-glow"></div>
                 </div>
@@ -160,18 +326,36 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="brand-icon">✨</span>
-                    <span>Abonglab</span>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-mark logo-mark--sm">A</div>
+                        <span>Abonglab</span>
+                    </div>
+                    <p class="footer-bio">Building AI apps that feel like magic.</p>
                 </div>
-                <div class="footer-text">
-                    <p>© 2026 Abonglab. All rights reserved.</p>
-                    <p class="footer-tagline">Building the future, one app at a time</p>
-                    <p class="footer-email">
+                <div class="footer-links-grid">
+                    <div class="footer-col">
+                        <h5>Apps</h5>
+                        <a href="https://sajuma.app" target="_blank" rel="noopener">Sajuma</a>
+                        <span style="color:var(--text-tertiary)">Stockwitch (Coming Soon)</span>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Legal</h5>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Contact</h5>
                         <a href="mailto:hello@abonglab.com">hello@abonglab.com</a>
-                    </p>
+                        <a href="mailto:support@abonglab.com">support@abonglab.com</a>
+                        <a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a>
+                    </div>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Abonglab. All rights reserved.</p>
+                <p class="footer-tagline">Made with ✨ and a lot of AI</p>
             </div>
         </div>
     </footer>

@@ -232,7 +232,10 @@
             ⚠️ Couldn't open the app automatically. Please tap the button above or open the app manually.
         </div>
 
-        <div class="logo">✨ Abonglab</div>
+        <div class="logo" style="display:flex;align-items:center;justify-content:center;gap:8px">
+            <div style="width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.8rem;color:white">A</div>
+            Abonglab
+        </div>
     </div>
 
     <script>
@@ -250,8 +253,7 @@
             // Map app names to deep link schemes
             const appSchemes = {
                 'stockwitch': 'stockwitch://',
-                // Add more apps here as needed
-                // 'yourapp': 'yourapp://',
+                'sajuma': 'https://sajuma.app/auth/confirmed',
             };
 
             return appSchemes[app] || 'stockwitch://'; // Default to stockwitch

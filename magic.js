@@ -153,8 +153,12 @@ function createSparkles(element) {
     }
 }
 
-// ===== CARD TILT EFFECT =====
+// ===== CARD TILT EFFECT (3D) =====
 document.querySelectorAll('[data-tilt]').forEach(card => {
+    const isAppCard = card.classList.contains('app-card');
+    const maxTilt = isAppCard ? 3 : 8;
+    const depth = isAppCard ? 1200 : 800;
+
     card.addEventListener('mousemove', function(e) {
         const rect = this.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -163,14 +167,24 @@ document.querySelectorAll('[data-tilt]').forEach(card => {
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
+        const rotateX = ((y - centerY) / centerY) * maxTilt;
+        const rotateY = ((centerX - x) / centerX) * maxTilt;
 
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px) scale(1.02)`;
+        this.style.transform = `perspective(${depth}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+        this.style.transition = 'transform 0.1s ease';
+
+        // Move glow highlight with mouse
+        const glow = this.querySelector('.card-glow, .app-card__glow');
+        if (glow) {
+            const pctX = (x / rect.width) * 100;
+            const pctY = (y / rect.height) * 100;
+            glow.style.background = `radial-gradient(circle at ${pctX}% ${pctY}%, rgba(139,92,246,0.2) 0%, transparent 60%)`;
+        }
     });
 
     card.addEventListener('mouseleave', function() {
-        this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
+        this.style.transform = `perspective(${depth}px) rotateX(0) rotateY(0) translateY(0)`;
+        this.style.transition = 'transform 0.5s cubic-bezier(0.23, 1, 0.32, 1)';
     });
 });
 
