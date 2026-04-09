@@ -129,6 +129,7 @@
             <li><strong>Error tracking</strong> — crash reporting services (e.g., Sentry)</li>
             <li><strong>AI processing</strong> — third-party AI providers used to generate responses and insights</li>
             <li><strong>Payment processing</strong> (Sajuma) — Stripe for subscription billing; we do not store full card numbers</li>
+            <li><strong>In-app purchases</strong> (Stockwitch) — RevenueCat for purchase validation and subscription management; all payment transactions are processed by Apple and subject to Apple's Privacy Policy</li>
             <li><strong>Push notifications</strong> (Stockwitch) — Apple Push Notification Service</li>
         </ul>
         <p>All service providers are contractually bound to use your data only to provide services to us and to protect it appropriately.</p>
@@ -202,11 +203,14 @@
         <h3>Stockwitch</h3>
         <p>Stockwitch is an iOS stock market intelligence application. Beyond standard account data, Stockwitch collects:</p>
         <ul>
-            <li>Stocks you view, favorite, and follow</li>
-            <li>Community posts and comments you create</li>
-            <li>AI-interaction data (questions and AI-generated responses about stocks)</li>
+            <li><strong>Stock activity</strong> — stocks you view, favorite, and follow, used to personalize your signal feed</li>
+            <li><strong>Taro reading history</strong> — your questions and the AI-generated readings tied to your account, stored to display your reading history within the app</li>
+            <li><strong>Marble currency activity</strong> — your marble (🔮) balance, purchase history, and how marbles are spent on features; marbles are a consumable in-app currency used exclusively within Stockwitch</li>
+            <li><strong>Subscription status</strong> — whether you hold an active Pro subscription, managed through Apple's App Store and RevenueCat; we do not store your payment card details</li>
+            <li><strong>News interaction data</strong> — articles you've read or swiped past, used to avoid showing you the same content twice</li>
+            <li><strong>Sign in with Apple</strong> — if you use Sign in with Apple, we receive only the information Apple provides: a unique identifier and, on first sign-in only, your name and either your real email or an Apple-generated relay address. We do not receive your Apple ID password.</li>
         </ul>
-        <p><strong>Financial Disclaimer:</strong> Stockwitch is for informational purposes only. Nothing in the app constitutes financial, investment, or trading advice. We do not collect information about your actual brokerage accounts or trading activity.</p>
+        <p><strong>Financial Disclaimer:</strong> Stockwitch is for informational and entertainment purposes only. Nothing in the app constitutes financial, investment, or trading advice. Taro readings are creative and entertainment features and should not be interpreted as investment guidance. We do not collect information about your actual brokerage accounts or trading activity.</p>
 
         <h2>Changes to This Policy</h2>
         <p>We may update this Privacy Policy periodically. We will notify you of material changes by posting a notice in the app and updating the "Last Updated" date at the top. Continued use of our services after changes are posted constitutes acceptance of the updated Policy.</p>

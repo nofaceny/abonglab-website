@@ -587,6 +587,12 @@ body {
     color: #fbbf24;
 }
 
+.app-tag--live {
+    background: rgba(0, 210, 147, 0.12);
+    border: 1px solid rgba(0, 210, 147, 0.3);
+    color: #00d293;
+}
+
 .btn-disabled {
     opacity: 0.55;
     cursor: not-allowed;
