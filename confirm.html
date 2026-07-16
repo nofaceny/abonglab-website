@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Confirmed - Abonglab</title>
+    <title>Return to App - Abonglab</title>
     <style>
         * {
             margin: 0;
@@ -199,12 +199,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="icon">✅</div>
-        <h1>Email Confirmed!</h1>
-        <div class="status" id="status">Successfully Verified</div>
+        <div class="icon">👋</div>
+        <h1>You're All Set</h1>
+        <div class="status" id="status">Ready to Continue</div>
 
         <p id="message">
-            Your email has been confirmed. You can now access all features!
+            Tap the button below to jump back into the app.
         </p>
 
         <div class="loader" id="loader">
@@ -247,20 +247,20 @@
             const urlParams = new URLSearchParams(window.location.search);
             const hash = window.location.hash.replace('#', '');
 
-            // Check for app parameter in URL (e.g., ?app=stockwitch)
+            // Check for app parameter in URL (e.g., ?app=digsy)
             const app = urlParams.get('app') || hash;
 
             // Map app names to deep link schemes
             const appSchemes = {
-                'stockwitch': 'stockwitch://',
-                'sajuma': 'https://sajuma.app/auth/confirmed',
+                'digsy': 'digsy://',
+                'pigeon': 'pigeon://',
             };
 
-            return appSchemes[app] || 'stockwitch://'; // Default to stockwitch
+            return appSchemes[app] || 'digsy://'; // Default to digsy
         }
 
         window.onload = function() {
-            // Check if confirmation was successful
+            // Check if the referring action reported an error
             const urlParams = new URLSearchParams(window.location.search);
             const error = urlParams.get('error');
             const errorDescription = urlParams.get('error_description');
@@ -268,19 +268,19 @@
 
             if (error) {
                 // Show error state
-                document.getElementById('status').textContent = 'Verification Failed';
+                document.getElementById('status').textContent = 'Something Went Wrong';
                 document.getElementById('status').style.background = 'rgba(248, 113, 113, 0.2)';
                 document.getElementById('status').style.borderColor = 'rgba(248, 113, 113, 0.4)';
                 document.getElementById('status').style.color = '#f87171';
                 document.querySelector('.icon').textContent = '❌';
-                document.getElementById('message').textContent = errorDescription || 'There was an error confirming your email. Please try again.';
+                document.getElementById('message').textContent = errorDescription || 'There was a problem. Please try again from the app.';
                 return;
             }
 
             // Update button with correct app scheme
             document.getElementById('openApp').href = appScheme;
 
-            // Success - attempt auto-redirect
+            // Attempt auto-redirect
             setTimeout(() => {
                 if (!redirected) {
                     document.getElementById('loader').classList.add('active');

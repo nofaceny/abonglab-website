@@ -3,94 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pigeon by Abonglab</title>
-    <meta name="description" content="Pigeon is a Citi Bike companion app for New York City riders. Live dock counts, ride tracking, routing, voice chat, and privacy information.">
-    <link rel="stylesheet" href="../styles.css">
+    <title>Pigeon: The Citi Bike Companion for NYC</title>
+    <meta name="description" content="Pigeon is a Citi Bike companion app for New York City riders. Live bike and dock counts, dock alerts, a ride diary, scenic routing, and live voice chat with your riding partner.">
+    <link rel="stylesheet" href="../app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="legal-page">
+<body class="pigeon">
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-mark">A</div>
-                <span class="logo-text">Abonglab</span>
-            </div>
-            <div class="nav-links">
-                <a href="#privacy" class="nav-link">Privacy</a>
-                <a href="#terms" class="nav-link">Terms</a>
+    <nav class="app-nav" id="nav">
+        <div class="app-nav__inner">
+            <a href="#top" class="app-nav__brand">
+                <span class="app-nav__icon">🕊️</span>
+                Pigeon
+            </a>
+            <div class="app-nav__links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="../index.html" class="app-nav__home">← Abonglab</a>
             </div>
         </div>
     </nav>
 
-    <div class="legal-header">
-        <h1 class="legal-title">Pigeon</h1>
-        <p class="legal-date">A Citi Bike companion for New York City riders</p>
-    </div>
-
-    <div class="legal-content">
-
-        <h2>What Pigeon Does</h2>
-        <p>Pigeon is a mobile app built for casual Citi Bike riders in New York City. It shows live bike and dock counts at every station and warns you before your destination dock fills up. It builds a lasting diary of every ride you take, so you can see the whole city you have explored. It offers safe, scenic, and fast routes between real docks along New York bike lanes. It lets you talk to a riding partner over a live connection while you both ride. It also surfaces curated food and drink stops and rider shared trails along your route.</p>
-
-        <h3>Subscriptions</h3>
-        <p>The free version of Pigeon is fully usable without a subscription. Pigeon also offers two optional subscription plans that unlock unlimited routing options, the ride builder, dock alerts, and trail publishing.</p>
-        <ul>
-            <li><strong>Pigeon Pro Monthly</strong> costs $3.99 per month and can be cancelled at any time.</li>
-            <li><strong>Pigeon Pro Annual</strong> costs $24.99 per year and includes a free trial period for new subscribers.</li>
-        </ul>
-        <p>All purchases are billed and managed by Apple through your App Store account.</p>
-
-        <h2 id="privacy">Privacy Policy</h2>
-        <p class="legal-date">Last updated July 13, 2026</p>
-        <p>This policy explains what information Pigeon collects, how it is used, and how you can control it. Pigeon is built by Abonglab. By using Pigeon you agree to the practices described here.</p>
-
-        <h3>Information We Collect</h3>
-        <ul>
-            <li><strong>Location.</strong> Pigeon asks for your location only while the app is in use. It is used to find nearby stations, record the path of your ride, and give you directions.</li>
-            <li><strong>Health and fitness data.</strong> If you allow it, Pigeon reads your existing cycling workouts from Apple Health to show them in your ride history, and writes each completed ride back to Apple Health as a cycling workout.</li>
-            <li><strong>Microphone and voice.</strong> If you use the Talk feature, Pigeon accesses your microphone so you can speak with your riding partner. Voice audio is carried live through LiveKit, a third party real time communication service, only for the length of an active Talk session. Pigeon does not record or store your voice audio.</li>
-            <li><strong>Device identifier.</strong> Pigeon does not require an account or login. Each device generates a random identifier that is used to connect your rides, saved places, and preferences to your device. This identifier is stored securely on your device.</li>
-            <li><strong>Ride and usage data.</strong> Pigeon stores the rides you record, including route, distance, and duration, along with any places or trails you save or publish, so your ride history and diary stay available to you.</li>
-            <li><strong>Push notifications.</strong> If you enable notifications, Pigeon registers your device with Apple's push notification service so it can alert you when a dock near your destination is filling up.</li>
-            <li><strong>Purchases.</strong> If you subscribe to Pigeon Pro, your purchase is handled entirely by Apple through StoreKit. Pigeon never sees or stores your payment card details.</li>
-        </ul>
-
-        <h3>How We Use Information</h3>
-        <p>We use the information above to operate Pigeon's core features, to send the dock alerts you opt into, to maintain your ride history and diary, and to keep the app secure and working correctly. We do not use your data for advertising and we do not sell your information to anyone.</p>
-
-        <h3>Who We Share Data With</h3>
-        <p>Pigeon shares data only with the services below, each used strictly to operate the app.</p>
-        <ul>
-            <li><strong>Apple.</strong> Handles purchases, push notifications, and Health data, all governed by Apple's own privacy policy.</li>
-            <li><strong>Fly.io.</strong> Hosts Pigeon's backend server and database.</li>
-            <li><strong>LiveKit.</strong> Carries live voice audio during an active Talk session. It does not receive your location or ride history.</li>
-            <li><strong>Stadia Maps.</strong> Receives route coordinates to calculate bike directions. It does not receive your device identifier.</li>
-        </ul>
-
-        <h3>Data Retention and Deletion</h3>
-        <p>Your ride history and saved places remain on Pigeon's server for as long as you use the app. If you would like your data deleted, contact us at the email below and we will remove it within thirty days.</p>
-
-        <h3>Your Choices</h3>
-        <p>You can turn off location, microphone, Health access, or notifications at any time in your device settings. Deleting the app removes the identifier and any ride cache stored locally on your device.</p>
-
-        <h3>Children's Privacy</h3>
-        <p>Pigeon is not directed at children under thirteen. We do not knowingly collect information from children.</p>
-
-        <h3>Changes to This Policy</h3>
-        <p>We may update this policy from time to time. Any changes will be posted on this page with a new last updated date.</p>
-
-        <h2 id="terms">Terms of Use</h2>
-        <p>Pigeon uses Apple's standard licensing agreement as its Terms of Use. You can read the full terms on Apple's website.</p>
-        <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="card-link">Apple Standard License Agreement</a></p>
-
-        <div class="warning-box">
-            <h2 style="border:none; padding:0; margin-top:0">Contact Us</h2>
-            <p>Questions about this page, your data, or a subscription can be sent to <a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a>.</p>
+    <header class="hero" id="top">
+        <div class="wrap hero__inner">
+            <div class="reveal">
+                <span class="hero__eyebrow">🚲 Made for NYC Citi Bike riders</span>
+                <h1>Ride the city.<br><span>Never chase an empty dock again.</span></h1>
+                <p class="hero__subtext">Pigeon shows live bike and dock counts at every station, warns you before your destination fills up, and keeps a running diary of every ride you take.</p>
+                <div class="hero__ctas">
+                    <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                    <a href="#how-it-works" class="btn btn-outline">See how it works</a>
+                </div>
+                <p class="hero__note">Free to ride · iOS · No account required</p>
+            </div>
+            <div class="reveal">
+                <div class="phone-stage">
+                    <div class="phone">
+                        <div class="phone__screen">
+                            <div class="phone__notch"></div>
+                            <div class="phone__content">
+                                <div class="phone__topbar">
+                                    <span>🕊️ Pigeon</span>
+                                    <span>Live</span>
+                                </div>
+                                <div class="mock-station">
+                                    <span class="mock-station__name">W 21st St &amp; 6th Ave</span>
+                                    <div class="mock-station__counts">
+                                        <span class="mock-count mock-count--bikes">🚲 7 bikes</span>
+                                        <span class="mock-count mock-count--docks">🅿️ 2 docks</span>
+                                    </div>
+                                    <span class="mock-alert">⚠️ Destination dock filling up</span>
+                                </div>
+                                <div class="mock-route">
+                                    <svg viewBox="0 0 200 60" class="route-svg">
+                                        <path d="M5,50 Q60,10 100,30 T195,10" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+                                        <circle cx="5" cy="50" r="4" fill="#3b82f6"/>
+                                        <circle cx="195" cy="10" r="4" fill="#10b981"/>
+                                    </svg>
+                                </div>
+                                <div class="mock-diary">📔 4.2 mi · 22 min · Central Park loop</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </header>
 
-    </div>
+    <section class="trust-strip">
+        <div class="wrap trust-strip__row reveal">
+            <div class="trust-item">
+                <span class="trust-item__value">Live counts</span>
+                <span class="trust-item__label">Every dock</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__value">Ride diary</span>
+                <span class="trust-item__label">Every ride</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__value">Made for NYC</span>
+                <span class="trust-item__label">Real bike lanes</span>
+            </div>
+        </div>
+    </section>
 
+    <section class="section" id="why">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Why Pigeon</span>
+                <h2 class="section__title">Citi Bike is great, until the dock is full</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card why-card--problem reveal">
+                    <h3>You show up and every dock is full</h3>
+                    <p>You plan a route, ride across town, and arrive to find every dock at your destination taken. Now you're circling the block looking for anywhere to park.</p>
+                </div>
+                <div class="why-card why-card--solution reveal">
+                    <h3>Pigeon warns you before it happens</h3>
+                    <p>Live bike and dock counts and a heads-up dock alert mean you know before you arrive, not after. Pick a better route or a nearby station while there's still time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Features</span>
+                <h2 class="section__title">Built for casual riders, not just commuters</h2>
+                <p class="section__desc">Everything you need to plan a ride, enjoy it, and remember it.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🚲</div>
+                    <h3>Live bike &amp; dock counts</h3>
+                    <p>See exactly how many bikes and open docks are at every station near you, updated live.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">⚠️</div>
+                    <h3>Dock alerts</h3>
+                    <p>Get warned before your destination dock fills up, so you can adjust your route while you still have options.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">📔</div>
+                    <h3>A diary of every ride</h3>
+                    <p>Pigeon keeps a lasting record of your rides, so over time you can see the whole city you've explored on two wheels.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🗺️</div>
+                    <h3>Safe, scenic, fast routes</h3>
+                    <p>Get routing between real docks along New York's bike lanes, tuned for whichever kind of ride you're in the mood for.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🎙️</div>
+                    <h3>Talk while you ride</h3>
+                    <p>Open a live voice connection with a riding partner so you can talk to each other while you both ride, hands-free.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🍜</div>
+                    <h3>Food &amp; drink stops</h3>
+                    <p>Discover curated food and drink spots along your route, so a ride can turn into a reason to explore a new block.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🌳</div>
+                    <h3>Rider-shared trails</h3>
+                    <p>Follow scenic trails other riders have published, or publish your own favorite loop for others to try.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🔒</div>
+                    <h3>No account needed</h3>
+                    <p>Pigeon runs on a random device identifier, not a login. No account, no password, and no ads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">How it works</span>
+                <h2 class="section__title">From dock to diary in three steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step__num">1</div>
+                    <h3>Check live counts</h3>
+                    <p>Open Pigeon to see bikes and open docks at every station near you before you start riding.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">2</div>
+                    <h3>Ride with a route and an alert</h3>
+                    <p>Follow a route along real bike lanes, and get a heads-up if your destination dock starts filling before you get there.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">3</div>
+                    <h3>Dock it and remember it</h3>
+                    <p>Your ride is saved to your diary automatically, so the whole city you've covered is there to look back on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="pricing">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Pricing</span>
+                <h2 class="section__title">Free to ride. Upgrade for more control.</h2>
+                <p class="section__desc">The free version of Pigeon is fully usable. Pro unlocks more routing, ride building, and trail publishing.</p>
+            </div>
+            <div class="pricing-grid pricing-grid--triple">
+                <div class="price-card reveal">
+                    <h3>Free</h3>
+                    <div class="price-card__price">$0</div>
+                    <p class="price-card__note">Fully usable, no catch</p>
+                    <ul>
+                        <li>Live bike &amp; dock counts</li>
+                        <li>Ride diary</li>
+                        <li>Basic routing</li>
+                        <li>No account required</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                </div>
+                <div class="price-card price-card--highlight reveal">
+                    <span class="price-card__badge">Most flexible</span>
+                    <h3>Pigeon Pro Monthly</h3>
+                    <div class="price-card__price">$3.99 <span>/ month</span></div>
+                    <p class="price-card__note">Cancel anytime</p>
+                    <ul>
+                        <li>Unlimited routing options</li>
+                        <li>Ride builder</li>
+                        <li>Dock alerts</li>
+                        <li>Trail publishing</li>
+                    </ul>
+                    <a href="#" class="btn btn-accent btn-block"><span class="apple-mark"></span> Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                </div>
+                <div class="price-card reveal">
+                    <h3>Pigeon Pro Annual</h3>
+                    <div class="price-card__price">$24.99 <span>/ year</span></div>
+                    <p class="price-card__note">Includes a free trial for new subscribers</p>
+                    <ul>
+                        <li>Everything in Pro Monthly</li>
+                        <li>Best value over a year</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">FAQ</span>
+                <h2 class="section__title">Good to know</h2>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Do I need a Citi Bike account to use Pigeon?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Pigeon does not require its own account or login, and it uses a random device identifier instead of a profile. You will still need your own Citi Bike membership or pass to actually unlock a bike.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Does Pigeon record my voice during Talk?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">No. Talk carries live voice audio through LiveKit only for the length of an active session. Pigeon does not record or store your voice.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Where is my ride data stored?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Your rides and saved places are stored on Pigeon's server, hosted on Fly.io, and linked to your device's random identifier rather than a personal account.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Can I cancel Pigeon Pro anytime?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Yes. Both Pro Monthly and Pro Annual are billed by Apple and can be cancelled anytime from your Apple ID subscription settings. Cancelling stops future billing at the end of the current period.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Does Pigeon connect to Apple Health?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Optionally. If you allow it, Pigeon can read your existing cycling workouts from Apple Health and write each completed ride back as a cycling workout.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Is Pigeon available on Android?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Not currently. Pigeon is an iOS app built for iPhone.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Does Pigeon work outside New York City?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Pigeon is built specifically around Citi Bike's stations and NYC bike lanes, so it's designed for riding in New York City.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="final-cta reveal">
+            <h2>Never get stuck circling a full dock again.</h2>
+            <p>Download Pigeon free and see live counts at every station near you.</p>
+            <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
+            <!-- TODO: replace with real App Store URL -->
+        </div>
+    </section>
+
+    <section class="legal" id="privacy">
+        <div class="wrap legal__inner">
+            <h2>Privacy Policy</h2>
+            <p class="legal__updated">Last updated July 16, 2026</p>
+            <p>This policy explains what information Pigeon collects, how it is used, and how you can control it. Pigeon is built by Abonglab. By using Pigeon you agree to the practices described here.</p>
+
+            <h3>Information we collect</h3>
+            <ul>
+                <li><strong>Location.</strong> Pigeon asks for your location only while the app is in use. It is used to find nearby stations, record the path of your ride, and give you directions.</li>
+                <li><strong>Health and fitness data.</strong> If you allow it, Pigeon reads your existing cycling workouts from Apple Health to show them in your ride history, and writes each completed ride back to Apple Health as a cycling workout.</li>
+                <li><strong>Microphone and voice.</strong> If you use the Talk feature, Pigeon accesses your microphone so you can speak with your riding partner. Voice audio is carried live through LiveKit, a third-party real-time communication service, only for the length of an active Talk session. Pigeon does not record or store your voice audio.</li>
+                <li><strong>Device identifier.</strong> Pigeon does not require an account or login. Each device generates a random identifier that is used to connect your rides, saved places, and preferences to your device. This identifier is stored securely on your device.</li>
+                <li><strong>Ride and usage data.</strong> Pigeon stores the rides you record, including route, distance, and duration, along with any places or trails you save or publish, so your ride history and diary stay available to you.</li>
+                <li><strong>Push notifications.</strong> If you enable notifications, Pigeon registers your device with Apple's push notification service so it can alert you when a dock near your destination is filling up.</li>
+                <li><strong>Purchases.</strong> If you subscribe to Pigeon Pro, your purchase is handled entirely by Apple through StoreKit. Pigeon never sees or stores your payment card details.</li>
+            </ul>
+
+            <h3>How we use information</h3>
+            <p>We use the information above to operate Pigeon's core features, to send the dock alerts you opt into, to maintain your ride history and diary, and to keep the app secure and working correctly. We do not use your data for advertising and we do not sell your information to anyone.</p>
+
+            <h3>Who we share data with</h3>
+            <p>Pigeon shares data only with the services below, each used strictly to operate the app.</p>
+            <ul>
+                <li><strong>Apple.</strong> Handles purchases, push notifications, and Health data, all governed by Apple's own privacy policy.</li>
+                <li><strong>Fly.io.</strong> Hosts Pigeon's backend server and database.</li>
+                <li><strong>LiveKit.</strong> Carries live voice audio during an active Talk session. It does not receive your location or ride history.</li>
+                <li><strong>Stadia Maps.</strong> Receives route coordinates to calculate bike directions. It does not receive your device identifier.</li>
+            </ul>
+
+            <h3>Data retention and deletion</h3>
+            <p>Your ride history and saved places remain on Pigeon's server for as long as you use the app. If you would like your data deleted, contact us at the email below and we will remove it within thirty days.</p>
+
+            <h3>Your choices</h3>
+            <p>You can turn off location, microphone, Health access, or notifications at any time in your device settings. Deleting the app removes the identifier and any ride cache stored locally on your device.</p>
+
+            <h3>Children's privacy</h3>
+            <p>Pigeon is not directed at children under thirteen. We do not knowingly collect information from children.</p>
+
+            <h3>Changes to this policy</h3>
+            <p>We may update this policy from time to time. Any changes will be posted on this page with a new "last updated" date.</p>
+
+            <div class="legal-callout">Questions about this policy? Contact <a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a>.</div>
+        </div>
+    </section>
+
+    <section class="legal" id="terms">
+        <div class="wrap legal__inner">
+            <h2>Terms of Use</h2>
+            <p class="legal__updated">Last updated July 16, 2026</p>
+            <p>Pigeon uses Apple's standard End User License Agreement as its Terms of Use for the app. By downloading or using Pigeon, you agree to that agreement in full.</p>
+            <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Read the Apple Standard License Agreement →</a></p>
+
+            <h3>Subscriptions</h3>
+            <p>The free version of Pigeon is fully usable without a subscription. Pigeon Pro Monthly costs $3.99 per month and can be cancelled at any time. Pigeon Pro Annual costs $24.99 per year and includes a free trial period for new subscribers. Both plans unlock unlimited routing options, the ride builder, dock alerts, and trail publishing. All purchases are billed and managed by Apple through your App Store account.</p>
+
+            <h3>Refunds</h3>
+            <p>All purchases are processed by Apple. Refund requests are handled by Apple under their standard App Store refund policy, not directly by Abonglab.</p>
+
+            <h3>Talk feature</h3>
+            <p>Pigeon's Talk feature connects you with a riding partner over live voice. You are responsible for what you say and how you use this feature. Voice audio is not recorded or stored by Pigeon.</p>
+
+            <div class="legal-callout">Questions about these terms? Contact <a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a>.</div>
+        </div>
+    </section>
+
+    <footer class="app-footer">
+        <div class="wrap">
+            <div class="app-footer__top">
+                <div class="app-footer__brand">
+                    <span class="app-nav__icon">🕊️</span>
+                    Pigeon
+                </div>
+                <div class="app-footer__links">
+                    <div class="app-footer__col">
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="app-footer__col">
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-footer__bottom">
+                <p><a href="../index.html">Part of Abonglab</a></p>
+                <p><a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../app.js"></script>
 </body>
 </html>

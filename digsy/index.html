@@ -3,84 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digsy by Abonglab</title>
-    <meta name="description" content="Digsy is an apartment tour tracker for New York City and New Jersey renters. Track the places you tour, see the real net-effective rent, ask the right questions, and compare your options. Support and privacy information.">
-    <link rel="stylesheet" href="../styles.css">
+    <title>Digsy: Apartment Tour Tracker for NYC &amp; NJ</title>
+    <meta name="description" content="Digsy is an apartment tour tracker for New York City and New Jersey renters. Track every building you tour, see the true net-effective rent, ask the right questions, and compare your options side by side.">
+    <link rel="stylesheet" href="../app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="legal-page">
+<body class="digsy">
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-mark">A</div>
-                <span class="logo-text">Abonglab</span>
-            </div>
-            <div class="nav-links">
-                <a href="#privacy" class="nav-link">Privacy</a>
-                <a href="#terms" class="nav-link">Terms</a>
-                <a href="#support" class="nav-link">Support</a>
+    <nav class="app-nav" id="nav">
+        <div class="app-nav__inner">
+            <a href="#top" class="app-nav__brand">
+                <span class="app-nav__icon">🏠</span>
+                Digsy
+            </a>
+            <div class="app-nav__links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="../index.html" class="app-nav__home">← Abonglab</a>
             </div>
         </div>
     </nav>
 
-    <div class="legal-header">
-        <h1 class="legal-title">Digsy</h1>
-        <p class="legal-date">An apartment tour tracker for New York City and New Jersey renters</p>
-    </div>
-
-    <div class="legal-content">
-
-        <h2>What Digsy Does</h2>
-        <p>Digsy is a mobile app for people hunting for an apartment. It keeps a private record of every building and unit you tour, so you never lose track of what you saw or what it cost. It calculates the true net-effective rent after concessions, so you can compare apartments honestly instead of guessing. It gives you a built-in checklist of the questions worth asking on a tour, and lets you email those questions to a leasing agent and paste the reply back in. It reads the details out of a listing link, a leasing email, or a screenshot so you rarely have to type anything. It captures walkthrough videos of each unit, pins every building on a map, and compares your options side by side. Everything you enter stays on your device.</p>
-
-        <h3>Purchases</h3>
-        <p>Digsy is free to download and free to use for tracking up to three buildings, along with the checklist and the net-effective rent math. Digsy Pro is a single one-time purchase, not a subscription, that unlocks unlimited buildings, side-by-side comparison, the listing and email capture tools, PDF reports, and commute times.</p>
-        <ul>
-            <li><strong>Digsy Pro</strong> is a one-time purchase of $6.99. It is yours forever and there is no recurring charge.</li>
-        </ul>
-        <p>The purchase is billed and managed entirely by Apple through your App Store account. Digsy never sees or stores your payment details.</p>
-
-        <h2 id="privacy">Privacy Policy</h2>
-        <p class="legal-date">Last updated July 16, 2026</p>
-        <p>This policy explains what information Digsy handles and how it is used. Digsy is built by Abonglab. In short: Digsy does not collect your data, does not require an account, and keeps everything you enter on your own device. By using Digsy you agree to the practices described here.</p>
-
-        <h3>Information We Collect</h3>
-        <p><strong>We do not collect your personal data.</strong> Digsy has no account or login, no analytics, no advertising, and no tracking. The information you create in the app lives on your device, and Abonglab never receives it. Specifically:</p>
-        <ul>
-            <li><strong>Your tours.</strong> The buildings, units, rents, notes, checklist answers, and walkthrough videos you add are stored locally on your device using Apple's on-device database. They are never sent to Abonglab.</li>
-            <li><strong>iCloud (optional).</strong> If you turn on iCloud sync in Settings, your tours are kept in step across your own Apple devices through your private iCloud account. This data is stored in your iCloud, governed by Apple's privacy policy, and Abonglab cannot read it.</li>
-            <li><strong>Location.</strong> If you allow it, Digsy uses your location only while the app is in use, on your device, to suggest the building you are standing in front of and to estimate commute times. Your location is never sent to Abonglab.</li>
-            <li><strong>Camera, microphone, and photos.</strong> If you use them, Digsy records walkthrough videos or imports existing ones, entirely on your device. This media never leaves your device unless you choose to share it yourself.</li>
-            <li><strong>Purchases.</strong> If you buy Digsy Pro, the purchase is handled entirely by Apple through StoreKit. Abonglab never sees or stores your payment information.</li>
-        </ul>
-
-        <h3>Maps</h3>
-        <p>Digsy uses Apple Maps to search for addresses, place pins, and estimate travel times. These requests are handled by Apple under Apple's own privacy policy. When you choose to import details from a listing link, Digsy fetches that public web page directly; no personal information is sent in the request.</p>
-
-        <h3>How We Use Information</h3>
-        <p>Because Digsy keeps your information on your device, that information is used only to run the app's features for you: tracking your tours, doing the rent math, showing your buildings on a map, and syncing across your own devices if you enable iCloud. We do not use your data for advertising and we do not sell your information to anyone.</p>
-
-        <h3>Data Retention and Deletion</h3>
-        <p>Your data stays on your device for as long as you keep the app. Deleting the app removes everything stored locally. If you enabled iCloud sync, you can remove that data from your device's iCloud settings, and it is managed by your own Apple account.</p>
-
-        <h3>Children's Privacy</h3>
-        <p>Digsy is not directed at children under thirteen, and because Digsy collects no data, we do not knowingly collect information from children.</p>
-
-        <h3>Changes to This Policy</h3>
-        <p>We may update this policy from time to time. Any changes will be posted on this page with a new last updated date.</p>
-
-        <h2 id="terms">Terms of Use</h2>
-        <p>Digsy uses Apple's standard licensing agreement as its Terms of Use. You can read the full terms on Apple's website.</p>
-        <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="card-link">Apple Standard License Agreement</a></p>
-
-        <div class="warning-box" id="support">
-            <h2 style="border:none; padding:0; margin-top:0">Support &amp; Contact</h2>
-            <p>Need help, have a question about your data, or want to report a problem? Email us at <a href="mailto:support@abonglab.com">support@abonglab.com</a> and we will get back to you.</p>
+    <header class="hero" id="top">
+        <div class="wrap hero__inner">
+            <div class="reveal">
+                <span class="hero__eyebrow">🏙️ Built for NYC &amp; NJ renters</span>
+                <h1>Find your next apartment<br><span>without losing your mind.</span></h1>
+                <p class="hero__subtext">Digsy tracks every building and unit you tour, does the real rent math after concessions, and helps you compare your options honestly, all in one private place.</p>
+                <div class="hero__ctas">
+                    <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                    <a href="#how-it-works" class="btn btn-outline">See how it works</a>
+                </div>
+                <p class="hero__note">Free to start · iOS · No account required</p>
+            </div>
+            <div class="reveal">
+                <div class="phone-stage">
+                    <div class="phone">
+                        <div class="phone__screen">
+                            <div class="phone__notch"></div>
+                            <div class="phone__content">
+                                <div class="phone__topbar">
+                                    <span>🏠 Digsy</span>
+                                    <span>3 toured</span>
+                                </div>
+                                <div class="mock-card">
+                                    <div class="mock-building">
+                                        <div>
+                                            <span class="mock-building__name">200 W 23rd St</span>
+                                            <span class="mock-building__unit">Unit 4B · Chelsea</span>
+                                        </div>
+                                        <span class="mock-building__rent">$2,850<small>/mo net</small></span>
+                                    </div>
+                                    <div class="mock-building">
+                                        <div>
+                                            <span class="mock-building__name">88 Greene Ave</span>
+                                            <span class="mock-building__unit">Unit 2R · Clinton Hill</span>
+                                        </div>
+                                        <span class="mock-building__rent">$3,120<small>/mo net</small></span>
+                                    </div>
+                                    <div class="mock-building">
+                                        <div>
+                                            <span class="mock-building__name">14 Journal Sq</span>
+                                            <span class="mock-building__unit">Unit 9C · Jersey City</span>
+                                        </div>
+                                        <span class="mock-building__rent">$2,430<small>/mo net</small></span>
+                                    </div>
+                                </div>
+                                <div class="mock-row">
+                                    <span class="mock-pill">📍 3 pinned</span>
+                                    <span class="mock-pill">⇄ Compare</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </header>
 
-    </div>
+    <section class="trust-strip">
+        <div class="wrap trust-strip__row reveal">
+            <div class="trust-item">
+                <span class="trust-item__value">On-device</span>
+                <span class="trust-item__label">Your data</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__value">No account</span>
+                <span class="trust-item__label">Ever needed</span>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__value">$6.99</span>
+                <span class="trust-item__label">One-time Pro</span>
+            </div>
+        </div>
+    </section>
 
+    <section class="section" id="why">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Why Digsy</span>
+                <h2 class="section__title">Apartment hunting is chaos. Digsy makes it a list.</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card why-card--problem reveal">
+                    <h3>Every apartment blurs together</h3>
+                    <p>After the fifth tour, the buildings, the broker fees, and the "one month free" deals all start to sound the same. You end up comparing apartments from memory and screenshots scattered across three apps.</p>
+                </div>
+                <div class="why-card why-card--solution reveal">
+                    <h3>One private record of everything you saw</h3>
+                    <p>Digsy keeps a running log of every building and unit, with the real net-effective rent already calculated, so when it's time to decide, you're comparing facts, not vibes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Features</span>
+                <h2 class="section__title">Everything you need on tour day</h2>
+                <p class="section__desc">No busywork. Digsy fills in the details so you can focus on the apartment.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">📋</div>
+                    <h3>Every tour, tracked</h3>
+                    <p>Keep a private record of every building and unit you tour so you never lose track of what you saw or what it cost.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">💵</div>
+                    <h3>True net-effective rent</h3>
+                    <p>Digsy calculates the real monthly cost after concessions, so you can compare apartments honestly instead of guessing.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">✅</div>
+                    <h3>Built-in tour checklist</h3>
+                    <p>A ready-made list of the questions worth asking on a tour, so you don't forget the one that actually matters.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">✉️</div>
+                    <h3>Email a leasing agent</h3>
+                    <p>Send your checklist questions straight to a leasing agent by email, then paste their reply back into Digsy to keep everything in one place.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🔗</div>
+                    <h3>Smart import</h3>
+                    <p>Digsy reads the details out of a listing link, a leasing email, or a screenshot, so you rarely have to type anything by hand.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🎥</div>
+                    <h3>Walkthrough video</h3>
+                    <p>Capture a quick walkthrough video of each unit so you can remember exactly what it looked like, weeks later.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">📍</div>
+                    <h3>Every building on a map</h3>
+                    <p>Digsy pins every building you've toured on a map, powered by Apple Maps, so you can see how they're spread across the city.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">⇄</div>
+                    <h3>Side-by-side comparison</h3>
+                    <p>Line up your top choices next to each other, rent, size, commute, and notes included, to make the final call with confidence.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-card__icon">🔒</div>
+                    <h3>Private by default</h3>
+                    <p>Everything you enter stays on your device. Optional iCloud sync keeps it across your own Apple devices, and nothing else.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">How it works</span>
+                <h2 class="section__title">From listing to lease in four steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step__num">1</div>
+                    <h3>Add a building</h3>
+                    <p>Paste a listing link, forward a leasing email, or snap a screenshot. Digsy fills in the details for you.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">2</div>
+                    <h3>Tour with the checklist</h3>
+                    <p>Walk through with Digsy's built-in question list, film a quick walkthrough, and jot down what stood out.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">3</div>
+                    <h3>See the real rent</h3>
+                    <p>Digsy works out the net-effective rent after concessions, so every building is measured the same way.</p>
+                </div>
+                <div class="step reveal">
+                    <div class="step__num">4</div>
+                    <h3>Compare and decide</h3>
+                    <p>Line your favorites up side by side on a map and pick with confidence, not guesswork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="pricing">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Pricing</span>
+                <h2 class="section__title">Free to start. Pay once if you need more.</h2>
+                <p class="section__desc">No subscriptions, no recurring charges. Digsy Pro is yours forever after a single purchase.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card reveal">
+                    <h3>Free</h3>
+                    <div class="price-card__price">$0</div>
+                    <p class="price-card__note">Track your first few buildings</p>
+                    <ul>
+                        <li>Track up to 3 buildings</li>
+                        <li>Built-in tour checklist</li>
+                        <li>Net-effective rent calculator</li>
+                        <li>No account required</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                </div>
+                <div class="price-card price-card--highlight reveal">
+                    <span class="price-card__badge">One-time purchase</span>
+                    <h3>Digsy Pro</h3>
+                    <div class="price-card__price">$6.99 <span>once</span></div>
+                    <p class="price-card__note">Not a subscription. Yours forever.</p>
+                    <ul>
+                        <li>Unlimited buildings</li>
+                        <li>Side-by-side comparison</li>
+                        <li>Listing &amp; email capture</li>
+                        <li>PDF reports</li>
+                        <li>Commute times</li>
+                    </ul>
+                    <a href="#" class="btn btn-accent btn-block"><span class="apple-mark"></span> Download on the App Store</a>
+                    <!-- TODO: replace with real App Store URL -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">FAQ</span>
+                <h2 class="section__title">Good to know</h2>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Is my apartment data private?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Yes. Everything you enter, buildings, units, notes, and videos, stays on your device. Digsy has no account or login, no analytics, and no advertising, so there is nothing to hand off to us.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Does Digsy work without an internet connection?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Tracking, notes, the checklist, and the rent math all work fully on-device, so you can use most of Digsy offline. Importing a listing link, using maps, or sending an email naturally needs a connection.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        What does iCloud sync do?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">If you turn it on in Settings, iCloud keeps your tours in step across your own Apple devices through your private iCloud account. Abonglab cannot read this data. It never leaves Apple's systems and yours.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Is Digsy Pro a subscription?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">No. Digsy Pro is a single one-time purchase of $6.99, billed once by Apple. There is no recurring charge and the unlock is yours for as long as you use the app.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Can I get a refund?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">All purchases are processed by Apple through the App Store, so refunds are handled by Apple under their standard refund policy. You can request one directly from your Apple ID purchase history.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Is Digsy available on Android?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Not currently. Digsy is an iOS app built for iPhone.</div>
+                    </div>
+                </div>
+                <div class="faq-item" data-open="false">
+                    <button class="faq-item__q" aria-expanded="false">
+                        Does Digsy work outside New York City and New Jersey?
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">Digsy is built with NYC and NJ renters in mind, from the rent math to the map, but nothing stops you from tracking a tour anywhere addresses and Apple Maps are supported.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="final-cta reveal">
+            <h2>Stop losing track of the apartments you've seen.</h2>
+            <p>Download Digsy free and start tracking your next tour today.</p>
+            <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
+            <!-- TODO: replace with real App Store URL -->
+        </div>
+    </section>
+
+    <section class="legal" id="privacy">
+        <div class="wrap legal__inner">
+            <h2>Privacy Policy</h2>
+            <p class="legal__updated">Last updated July 16, 2026</p>
+            <p>This policy explains what information Digsy handles and how it is used. Digsy is built by Abonglab. In short: Digsy does not collect your data, does not require an account, and keeps everything you enter on your own device. By using Digsy you agree to the practices described here.</p>
+
+            <h3>Information we collect</h3>
+            <p><strong>We do not collect your personal data.</strong> Digsy has no account or login, no analytics, no advertising, and no tracking. The information you create in the app lives on your device, and Abonglab never receives it. Specifically:</p>
+            <ul>
+                <li><strong>Your tours.</strong> The buildings, units, rents, notes, checklist answers, and walkthrough videos you add are stored locally on your device using Apple's on-device database. They are never sent to Abonglab.</li>
+                <li><strong>iCloud (optional).</strong> If you turn on iCloud sync in Settings, your tours are kept in step across your own Apple devices through your private iCloud account. This data is stored in your iCloud, governed by Apple's privacy policy, and Abonglab cannot read it.</li>
+                <li><strong>Location.</strong> If you allow it, Digsy uses your location only while the app is in use, on your device, to suggest the building you are standing in front of and to estimate commute times. Your location is never sent to Abonglab.</li>
+                <li><strong>Camera, microphone, and photos.</strong> If you use them, Digsy records walkthrough videos or imports existing ones, entirely on your device. This media never leaves your device unless you choose to share it yourself.</li>
+                <li><strong>Purchases.</strong> If you buy Digsy Pro, the purchase is handled entirely by Apple through StoreKit. Abonglab never sees or stores your payment information.</li>
+            </ul>
+
+            <h3>Maps</h3>
+            <p>Digsy uses Apple Maps to search for addresses, place pins, and estimate travel times. These requests are handled by Apple under Apple's own privacy policy. When you choose to import details from a listing link, Digsy fetches that public web page directly, and no personal information is sent in the request.</p>
+
+            <h3>How we use information</h3>
+            <p>Because Digsy keeps your information on your device, that information is used only to run the app's features for you: tracking your tours, doing the rent math, showing your buildings on a map, and syncing across your own devices if you enable iCloud. We do not use your data for advertising and we do not sell your information to anyone.</p>
+
+            <h3>Data retention and deletion</h3>
+            <p>Your data stays on your device for as long as you keep the app. Deleting the app removes everything stored locally. If you enabled iCloud sync, you can remove that data from your device's iCloud settings at any time, and it is managed entirely by your own Apple account.</p>
+
+            <h3>Your choices</h3>
+            <p>You can turn off location access at any time in your device settings, and you can turn iCloud sync on or off whenever you like. Because there is no account, deleting the app is a complete and immediate way to remove your local data.</p>
+
+            <h3>Children's privacy</h3>
+            <p>Digsy is not directed at children under thirteen, and because Digsy collects no data, we do not knowingly collect information from children.</p>
+
+            <h3>Changes to this policy</h3>
+            <p>We may update this policy from time to time. Any changes will be posted on this page with a new "last updated" date.</p>
+
+            <div class="legal-callout">Questions about this policy? Contact <a href="mailto:privacy@abonglab.com">privacy@abonglab.com</a>.</div>
+        </div>
+    </section>
+
+    <section class="legal" id="terms">
+        <div class="wrap legal__inner">
+            <h2>Terms of Use</h2>
+            <p class="legal__updated">Last updated July 16, 2026</p>
+            <p>Digsy uses Apple's standard End User License Agreement as its Terms of Use for the app. By downloading or using Digsy, you agree to that agreement in full.</p>
+            <p><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Read the Apple Standard License Agreement →</a></p>
+
+            <h3>Purchases</h3>
+            <p>Digsy is free to download and free to use for tracking up to three buildings, along with the checklist and the net-effective rent math. Digsy Pro is a single one-time purchase of $6.99. It is not a subscription: there is no recurring charge, and the unlock is yours for as long as you use the app. The purchase is billed and managed entirely by Apple through your App Store account. Digsy never sees or stores your payment details.</p>
+
+            <h3>Refunds</h3>
+            <p>All purchases are processed by Apple. Refund requests are handled by Apple under their standard App Store refund policy, not directly by Abonglab.</p>
+
+            <h3>Availability</h3>
+            <p>Digsy is provided "as is" for use on compatible iOS devices. We aim to keep the app working reliably but cannot guarantee uninterrupted availability of every feature at all times.</p>
+
+            <div class="legal-callout">Questions about these terms? Contact <a href="mailto:hello@abonglab.com">hello@abonglab.com</a>.</div>
+        </div>
+    </section>
+
+    <section class="legal" id="support">
+        <div class="wrap legal__inner">
+            <h2>Support</h2>
+            <p>Need help, have a question about your data, or want to report a problem? Email us and we will get back to you.</p>
+            <p><a href="mailto:support@abonglab.com">support@abonglab.com</a></p>
+        </div>
+    </section>
+
+    <footer class="app-footer">
+        <div class="wrap">
+            <div class="app-footer__top">
+                <div class="app-footer__brand">
+                    <span class="app-nav__icon">🏠</span>
+                    Digsy
+                </div>
+                <div class="app-footer__links">
+                    <div class="app-footer__col">
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#faq">FAQ</a>
+                    </div>
+                    <div class="app-footer__col">
+                        <a href="#privacy">Privacy</a>
+                        <a href="#terms">Terms</a>
+                        <a href="#support">Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-footer__bottom">
+                <p><a href="../index.html">Part of Abonglab</a></p>
+                <p><a href="mailto:support@abonglab.com">support@abonglab.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../app.js"></script>
 </body>
 </html>

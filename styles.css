@@ -1,4 +1,4 @@
-/* ===== ABONGLAB — 3D THEME ===== */
+/* ===== ABONGLAB: 3D THEME ===== */
 
 :root {
     --primary: #8b5cf6;
@@ -6,9 +6,10 @@
     --primary-light: #a78bfa;
     --secondary: #ec4899;
     --accent: #10b981;
-    --sajuma: #7C3FE4;
-    --sajuma-light: #C9B3FF;
-    --stockwitch: #8b5cf6;
+    --digsy: #10b981;
+    --digsy-light: #6ee7b7;
+    --pigeon: #3b82f6;
+    --pigeon-light: #93c5fd;
     --dark: #0a0a1a;
     --darker: #050510;
     --card-bg: rgba(20, 20, 45, 0.7);
@@ -523,12 +524,12 @@ body {
     pointer-events: none;
 }
 
-.app-card--sajuma .app-card__glow {
-    background: radial-gradient(ellipse at 30% 50%, rgba(124, 63, 228, 0.15) 0%, transparent 70%);
+.app-card--digsy .app-card__glow {
+    background: radial-gradient(ellipse at 30% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
 }
 
-.app-card--stockwitch .app-card__glow {
-    background: radial-gradient(ellipse at 70% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+.app-card--pigeon .app-card__glow {
+    background: radial-gradient(ellipse at 70% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
 }
 
 .app-card:hover .app-card__glow {
@@ -536,24 +537,24 @@ body {
 }
 
 /* Top accent line */
-.app-card--sajuma::before {
+.app-card--digsy::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #7C3FE4, #FF4488, transparent);
+    background: linear-gradient(90deg, transparent, #10b981, #6ee7b7, transparent);
 }
 
-.app-card--stockwitch::before {
+.app-card--pigeon::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #8b5cf6, #10b981, transparent);
+    background: linear-gradient(90deg, transparent, #3b82f6, #93c5fd, transparent);
 }
 
 .app-tag {
@@ -630,8 +631,8 @@ body {
     z-index: -1;
 }
 
-.app-icon-glow--sajuma  { background: #7C3FE4; }
-.app-icon-glow--stockwitch { background: #8b5cf6; }
+.app-icon-glow--digsy  { background: #10b981; }
+.app-icon-glow--pigeon { background: #3b82f6; }
 
 .app-title {
     font-size: 2.2rem;
@@ -756,88 +757,126 @@ body {
     color: #C9B3FF;
 }
 
-.mock-services {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+/* Digsy mockup: toured buildings with net-effective rent */
+.mock-building-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
     margin-bottom: 1rem;
 }
 
-.mock-service-card {
+.mock-building-item {
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.06);
+    border-left: 2px solid var(--digsy);
     border-radius: 10px;
-    padding: 0.6rem 0.5rem;
+    padding: 0.55rem 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.mock-building-text {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    font-size: 0.7rem;
+    gap: 0.1rem;
+}
+
+.mock-building-name {
+    font-size: 0.72rem;
+    font-weight: 700;
     color: var(--text);
-    position: relative;
-    overflow: hidden;
 }
 
-.mock-service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--c);
+.mock-building-unit {
+    font-size: 0.62rem;
+    color: var(--text-tertiary);
 }
 
-.mock-badge {
-    font-size: 0.55rem;
-    background: rgba(124, 63, 228, 0.3);
-    border-radius: 3px;
-    padding: 0 3px;
-    width: fit-content;
-    color: #C9B3FF;
+.mock-rent {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--digsy-light);
+    white-space: nowrap;
 }
 
-.mock-badge--free {
-    background: rgba(16, 185, 129, 0.25);
+.mock-rent small {
+    font-weight: 500;
+    color: var(--text-tertiary);
+}
+
+.mock-map-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mock-map-pin,
+.mock-compare-chip {
+    flex: 1;
+    text-align: center;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.4rem 0.5rem;
+    background: rgba(16, 185, 129, 0.12);
     color: #6ee7b7;
 }
 
-.mock-badge--new {
-    background: rgba(236, 72, 153, 0.25);
-    color: #f9a8d4;
-}
-
-.mock-chat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.mock-bubble {
-    padding: 0.45rem 0.7rem;
-    border-radius: 12px;
-    font-size: 0.68rem;
-    line-height: 1.4;
-    max-width: 85%;
-}
-
-.mock-bubble--ai {
-    background: rgba(124, 63, 228, 0.2);
-    border: 1px solid rgba(124, 63, 228, 0.25);
-    color: var(--text-secondary);
-    align-self: flex-start;
-}
-
-.mock-bubble--user {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: var(--text);
-    align-self: flex-end;
-}
-
-.mock-chart {
+/* Pigeon mockup: live station counts, route, ride diary */
+.mock-station-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 0.6rem 0.7rem;
     margin-bottom: 0.75rem;
 }
 
+.mock-station-name {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+}
+
+.mock-station-counts {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.mock-count {
+    font-size: 0.65rem;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+}
+
+.mock-count--bikes {
+    background: rgba(59, 130, 246, 0.15);
+    color: var(--pigeon-light);
+}
+
+.mock-count--docks {
+    background: rgba(236, 72, 153, 0.15);
+    color: #f9a8d4;
+}
+
+.mock-dock-alert {
+    display: inline-block;
+    font-size: 0.6rem;
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.12);
+    border-radius: 6px;
+    padding: 0.2rem 0.45rem;
+}
+
+.mock-route-wrap {
+    margin-bottom: 0.75rem;
+}
+
+.route-svg,
 .chart-svg {
     width: 100%;
     height: auto;
@@ -846,41 +885,13 @@ body {
     background: rgba(255,255,255,0.02);
 }
 
-.mock-ticker {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.3rem 0;
-    font-size: 0.7rem;
-}
-
-.ticker-symbol { font-weight: 700; color: var(--text); }
-.ticker-price  { color: var(--text-secondary); }
-.ticker-change { color: #6ee7b7; margin-left: auto; }
-
-.mock-signals {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.mock-signal {
-    font-size: 0.62rem;
-    border-radius: 6px;
-    padding: 0.35rem 0.5rem;
-    line-height: 1.4;
-}
-
-.mock-signal--bull {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    color: #6ee7b7;
-}
-
-.mock-signal--news {
-    background: rgba(139, 92, 246, 0.1);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    color: var(--primary-light);
+.mock-diary-entry {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 0.5rem 0.65rem;
 }
 
 /* ===== MISSION SECTION ===== */
@@ -1006,26 +1017,26 @@ body {
     transform: translateY(-2px);
 }
 
-.btn-sajuma {
-    background: linear-gradient(135deg, #7C3FE4, #5B1FBE);
+.btn-digsy {
+    background: linear-gradient(135deg, #10b981, #047857);
     color: white;
-    box-shadow: 0 8px 24px rgba(124, 63, 228, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.btn-sajuma:hover {
+.btn-digsy:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(124, 63, 228, 0.55);
+    box-shadow: 0 12px 32px rgba(16, 185, 129, 0.55);
 }
 
-.btn-stockwitch {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+.btn-pigeon {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
     color: white;
-    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.btn-stockwitch:hover {
+.btn-pigeon:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(139, 92, 246, 0.55);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.55);
 }
 
 .apple-logo {
