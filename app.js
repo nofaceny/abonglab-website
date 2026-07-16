@@ -80,6 +80,33 @@
         });
     }
 
+    // ----- Dock countdown demo (Pigeon "Never get stranded" section) -----
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('.dock-countdown').forEach((el) => {
+        const counts = (el.dataset.counts || '').split(',').map(Number).filter((n) => !Number.isNaN(n));
+        const numEl = el.querySelector('.dock-countdown__num');
+        const alertEl = el.querySelector('.dock-countdown__alert');
+        const fillEl = el.querySelector('.dock-alert-demo__track-fill');
+        const maxCount = counts[0] || 1;
+        if (!counts.length || !numEl) return;
+
+        const render = (count) => {
+            numEl.textContent = count;
+            el.classList.toggle('is-critical', count <= 2);
+            if (alertEl) alertEl.classList.toggle('is-active', count <= 2);
+            if (fillEl) fillEl.style.width = Math.max(6, (count / maxCount) * 100) + '%';
+        };
+
+        render(counts[0]);
+        if (reducedMotion) return;
+
+        let i = 0;
+        setInterval(() => {
+            i = (i + 1) % counts.length;
+            render(counts[i]);
+        }, 2200);
+    });
+
     // ----- Smooth scroll for in-page anchors -----
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', (e) => {

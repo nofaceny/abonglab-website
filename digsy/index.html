@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
 </head>
 <body class="digsy">
 
@@ -35,13 +35,31 @@
                 <h1>Find your next apartment<br><span>without losing your mind.</span></h1>
                 <p class="hero__subtext">Digsy tracks every building and unit you tour, does the real rent math after concessions, and helps you compare your options honestly, all in one private place.</p>
                 <div class="hero__ctas">
-                    <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                        <!-- TODO: replace with real App Store URL -->
+                        <span class="appstore-badge__glyph"></span>
+                        <span class="appstore-badge__text">
+                            <span class="appstore-badge__line1">Download on the</span>
+                            <span class="appstore-badge__line2">App Store</span>
+                        </span>
+                    </a>
                     <a href="#how-it-works" class="btn btn-outline">See how it works</a>
                 </div>
                 <p class="hero__note">Free to start · iOS · No account required</p>
             </div>
-            <div class="reveal">
+            <div class="reveal hero-visual">
+                <div class="hero-visual__art" aria-hidden="true">
+                    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice">
+                        <g fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5" style="color:var(--border)">
+                            <rect x="10" y="150" width="34" height="130"/>
+                            <rect x="50" y="110" width="26" height="170"/>
+                            <rect x="82" y="170" width="30" height="110"/>
+                            <rect x="120" y="90" width="22" height="190"/>
+                            <rect x="150" y="140" width="34" height="140"/>
+                            <line x1="0" y1="280" x2="400" y2="280"/>
+                        </g>
+                    </svg>
+                </div>
                 <div class="phone-stage">
                     <div class="phone">
                         <div class="phone__screen">
@@ -82,6 +100,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="float-card float-card--rent" aria-hidden="true">
+                    <span class="float-card__label">Net-effective rent</span>
+                    <span class="float-card__value">$2,933<span class="float-card__was">$3,200</span></span>
+                </div>
+                <div class="float-chip float-chip--map" aria-hidden="true">📍 3 buildings pinned</div>
             </div>
         </div>
     </header>
@@ -131,47 +154,47 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">📋</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3.5h6a1 1 0 011 1V5h1.5A1.5 1.5 0 0119 6.5v14A1.5 1.5 0 0117.5 22h-11A1.5 1.5 0 015 20.5v-14A1.5 1.5 0 016.5 5H8v-.5a1 1 0 011-1z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg></div>
                     <h3>Every tour, tracked</h3>
                     <p>Keep a private record of every building and unit you tour so you never lose track of what you saw or what it cost.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">💵</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-2.5-1.5L13 21l-2.5-1.5L8 21l-2-1.5V3z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div>
                     <h3>True net-effective rent</h3>
                     <p>Digsy calculates the real monthly cost after concessions, so you can compare apartments honestly instead of guessing.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">✅</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M7 9l1.5 1.5L11 8M7 15l1.5 1.5L11 14"/><path d="M13 9h5M13 15h5"/></svg></div>
                     <h3>Built-in tour checklist</h3>
                     <p>A ready-made list of the questions worth asking on a tour, so you don't forget the one that actually matters.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">✉️</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 6.5l8 6.5 8-6.5"/></svg></div>
                     <h3>Email a leasing agent</h3>
                     <p>Send your checklist questions straight to a leasing agent by email, then paste their reply back into Digsy to keep everything in one place.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🔗</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 14a3.5 3.5 0 010-5l2.5-2.5a3.5 3.5 0 015 5L16 13"/><path d="M14 10a3.5 3.5 0 010 5l-2.5 2.5a3.5 3.5 0 01-5-5L8 11"/></svg></div>
                     <h3>Smart import</h3>
                     <p>Digsy reads the details out of a listing link, a leasing email, or a screenshot, so you rarely have to type anything by hand.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🎥</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg></div>
                     <h3>Walkthrough video</h3>
                     <p>Capture a quick walkthrough video of each unit so you can remember exactly what it looked like, weeks later.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">📍</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7.2 7-12a7 7 0 10-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.3"/></svg></div>
                     <h3>Every building on a map</h3>
                     <p>Digsy pins every building you've toured on a map, powered by Apple Maps, so you can see how they're spread across the city.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">⇄</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/><path d="M10.5 12h3"/></svg></div>
                     <h3>Side-by-side comparison</h3>
                     <p>Line up your top choices next to each other, rent, size, commute, and notes included, to make the final call with confidence.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🔒</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
                     <h3>Private by default</h3>
                     <p>Everything you enter stays on your device. Optional iCloud sync keeps it across your own Apple devices, and nothing else.</p>
                 </div>
@@ -179,7 +202,28 @@
         </div>
     </section>
 
-    <section class="section" id="how-it-works">
+    <section class="section" id="rent-math">
+        <div class="wrap">
+            <div class="rent-math">
+                <div class="rent-math__text reveal">
+                    <span class="section__eyebrow">The killer feature</span>
+                    <h2>The rent math, done right</h2>
+                    <p>Listings love to advertise the sticker price. Digsy shows you the number that actually matters: what you will pay every month once concessions like "one month free" are spread across the lease.</p>
+                    <p>Enter the advertised rent and the concession once, and Digsy keeps the true net-effective number attached to that building for good, ready to compare against every other place you tour.</p>
+                </div>
+                <div class="rent-ledger reveal">
+                    <span class="rent-ledger__tag">Example</span>
+                    <div class="rent-ledger__row"><span>Advertised rent</span><span>$3,200 / mo</span></div>
+                    <div class="rent-ledger__row rent-ledger__row--concession"><span>1 month free (12-mo lease)</span><span>-$267 / mo</span></div>
+                    <div class="rent-ledger__divider"></div>
+                    <div class="rent-ledger__row rent-ledger__row--total"><span class="rent-ledger__total-label">True net-effective rent</span><span class="rent-ledger__total-value">$2,933 / mo</span></div>
+                    <div class="rent-ledger__note">Spread evenly across a 12-month lease. Digsy runs this math automatically for every building you add.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="how-it-works">
         <div class="wrap">
             <div class="section__header reveal">
                 <span class="section__eyebrow">How it works</span>
@@ -210,6 +254,49 @@
         </div>
     </section>
 
+    <section class="section" id="compare">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Decide with confidence</span>
+                <h2 class="section__title">Compare like-for-like</h2>
+                <p class="section__desc">Line up your top picks side by side, on the same terms, and let the winner stand out.</p>
+            </div>
+            <div class="compare-table reveal">
+                <div class="compare-table__row compare-table__row--head">
+                    <span class="compare-table__label"></span>
+                    <span>200 W 23rd St</span>
+                    <span class="compare-table__winner"><span class="compare-table__badge">Best value</span>88 Greene Ave</span>
+                    <span>14 Journal Sq</span>
+                </div>
+                <div class="compare-table__row">
+                    <span class="compare-table__label">Net rent</span>
+                    <span>$2,850 / mo</span>
+                    <span class="compare-table__winner">$2,690 / mo</span>
+                    <span>$2,430 / mo</span>
+                </div>
+                <div class="compare-table__row">
+                    <span class="compare-table__label">Size</span>
+                    <span>1 bed, 650 sqft</span>
+                    <span class="compare-table__winner">1 bed, 700 sqft</span>
+                    <span>Studio, 480 sqft</span>
+                </div>
+                <div class="compare-table__row">
+                    <span class="compare-table__label">Commute</span>
+                    <span>24 min</span>
+                    <span class="compare-table__winner">19 min</span>
+                    <span>38 min</span>
+                </div>
+                <div class="compare-table__row">
+                    <span class="compare-table__label">Notes</span>
+                    <span>No dishwasher</span>
+                    <span class="compare-table__winner">Laundry in unit</span>
+                    <span>Great light, far commute</span>
+                </div>
+            </div>
+            <p class="example-caption">Example comparison with sample buildings, shown for illustration.</p>
+        </div>
+    </section>
+
     <section class="section section-alt" id="pricing">
         <div class="wrap">
             <div class="section__header reveal">
@@ -228,8 +315,16 @@
                         <li>Net-effective rent calculator</li>
                         <li>No account required</li>
                     </ul>
-                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <div class="price-card__cta">
+                        <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                            <!-- TODO: replace with real App Store URL -->
+                            <span class="appstore-badge__glyph"></span>
+                            <span class="appstore-badge__text">
+                                <span class="appstore-badge__line1">Download on the</span>
+                                <span class="appstore-badge__line2">App Store</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="price-card price-card--highlight reveal">
                     <span class="price-card__badge">One-time purchase</span>
@@ -243,8 +338,16 @@
                         <li>PDF reports</li>
                         <li>Commute times</li>
                     </ul>
-                    <a href="#" class="btn btn-accent btn-block"><span class="apple-mark"></span> Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <div class="price-card__cta">
+                        <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                            <!-- TODO: replace with real App Store URL -->
+                            <span class="appstore-badge__glyph"></span>
+                            <span class="appstore-badge__text">
+                                <span class="appstore-badge__line1">Download on the</span>
+                                <span class="appstore-badge__line2">App Store</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -328,8 +431,14 @@
         <div class="final-cta reveal">
             <h2>Stop losing track of the apartments you've seen.</h2>
             <p>Download Digsy free and start tracking your next tour today.</p>
-            <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
-            <!-- TODO: replace with real App Store URL -->
+            <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                <!-- TODO: replace with real App Store URL -->
+                <span class="appstore-badge__glyph"></span>
+                <span class="appstore-badge__text">
+                    <span class="appstore-badge__line1">Download on the</span>
+                    <span class="appstore-badge__line2">App Store</span>
+                </span>
+            </a>
         </div>
     </section>
 

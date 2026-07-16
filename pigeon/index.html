@@ -35,13 +35,27 @@
                 <h1>Ride the city.<br><span>Never chase an empty dock again.</span></h1>
                 <p class="hero__subtext">Pigeon shows live bike and dock counts at every station, warns you before your destination fills up, and keeps a running diary of every ride you take.</p>
                 <div class="hero__ctas">
-                    <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                        <!-- TODO: replace with real App Store URL -->
+                        <span class="appstore-badge__glyph"></span>
+                        <span class="appstore-badge__text">
+                            <span class="appstore-badge__line1">Download on the</span>
+                            <span class="appstore-badge__line2">App Store</span>
+                        </span>
+                    </a>
                     <a href="#how-it-works" class="btn btn-outline">See how it works</a>
                 </div>
                 <p class="hero__note">Free to ride · iOS · No account required</p>
             </div>
-            <div class="reveal">
+            <div class="reveal hero-visual">
+                <div class="hero-visual__art" aria-hidden="true">
+                    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMax slice">
+                        <g stroke="var(--accent-light)" stroke-width="2" opacity="0.4">
+                            <line x1="0" y1="260" x2="400" y2="260" stroke-dasharray="14 12"/>
+                            <line x1="0" y1="230" x2="400" y2="230" stroke-dasharray="4 10" stroke-width="1.2"/>
+                        </g>
+                    </svg>
+                </div>
                 <div class="phone-stage">
                     <div class="phone">
                         <div class="phone__screen">
@@ -61,7 +75,7 @@
                                 </div>
                                 <div class="mock-route">
                                     <svg viewBox="0 0 200 60" class="route-svg">
-                                        <path d="M5,50 Q60,10 100,30 T195,10" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+                                        <path class="route-draw" d="M5,50 Q60,10 100,30 T195,10" fill="none" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
                                         <circle cx="5" cy="50" r="4" fill="#3b82f6"/>
                                         <circle cx="195" cy="10" r="4" fill="#10b981"/>
                                     </svg>
@@ -71,11 +85,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="float-card float-card--dock" aria-hidden="true">
+                    <span class="float-card__label">Union Sq dock</span>
+                    <div class="float-card__row"><span class="float-card__value">2</span><span>docks open</span></div>
+                </div>
+                <div class="float-chip float-chip--speed" aria-hidden="true">⚡ Fast route · 11 min</div>
             </div>
         </div>
     </header>
 
-    <section class="trust-strip">
+    <section class="trust-strip bikelane">
         <div class="wrap trust-strip__row reveal">
             <div class="trust-item">
                 <span class="trust-item__value">Live counts</span>
@@ -120,42 +139,42 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🚲</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="17.5" r="3.2"/><circle cx="18.5" cy="17.5" r="3.2"/><path d="M5.5 17.5l4-10h3l4 7h3.5M9.5 7.5h4M12.5 14.5l2.5 3"/></svg></div>
                     <h3>Live bike &amp; dock counts</h3>
                     <p>See exactly how many bikes and open docks are at every station near you, updated live.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">⚠️</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
                     <h3>Dock alerts</h3>
                     <p>Get warned before your destination dock fills up, so you can adjust your route while you still have options.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">📔</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 016.5 3H19v16H6.5A2.5 2.5 0 004 21.5v-16z"/><path d="M4 19a2.5 2.5 0 012.5-2.5H19"/></svg></div>
                     <h3>A diary of every ride</h3>
                     <p>Pigeon keeps a lasting record of your rides, so over time you can see the whole city you've explored on two wheels.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🗺️</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l5-3 6 3 5-3V4l-5 3-6-3-5 3z"/><path d="M9 4v13M15 7v13"/></svg></div>
                     <h3>Safe, scenic, fast routes</h3>
                     <p>Get routing between real docks along New York's bike lanes, tuned for whichever kind of ride you're in the mood for.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🎙️</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"/></svg></div>
                     <h3>Talk while you ride</h3>
                     <p>Open a live voice connection with a riding partner so you can talk to each other while you both ride, hands-free.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🍜</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h13v6a6.5 6.5 0 01-13 0V4z"/><path d="M17 7h2a2.5 2.5 0 010 5h-2M4 20h13"/></svg></div>
                     <h3>Food &amp; drink stops</h3>
                     <p>Discover curated food and drink spots along your route, so a ride can turn into a reason to explore a new block.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🌳</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C10 4 4 10 4 20c8 0 14-6 14-16z"/><path d="M8 20c2-6 6-10 12-12"/></svg></div>
                     <h3>Rider-shared trails</h3>
                     <p>Follow scenic trails other riders have published, or publish your own favorite loop for others to try.</p>
                 </div>
                 <div class="feature-card reveal">
-                    <div class="feature-card__icon">🔒</div>
+                    <div class="feature-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/><path d="M4 4l16 16"/></svg></div>
                     <h3>No account needed</h3>
                     <p>Pigeon runs on a random device identifier, not a login. No account, no password, and no ads.</p>
                 </div>
@@ -163,7 +182,34 @@
         </div>
     </section>
 
-    <section class="section" id="how-it-works">
+    <section class="section" id="routing-modes">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Routing</span>
+                <h2 class="section__title">Pick the ride you're in the mood for</h2>
+                <p class="section__desc">Every route runs between real Citi Bike docks along New York's bike lanes. Choose how you want to get there.</p>
+            </div>
+            <div class="route-modes">
+                <div class="route-mode-card reveal">
+                    <div class="route-mode-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3.5v6c0 5-3.5 7.5-7 8.5-3.5-1-7-3.5-7-8.5v-6z"/><path d="M9 12l2 2 4-4.5"/></svg></div>
+                    <h3>Safe</h3>
+                    <p>Favors protected bike lanes and quieter streets, even if it takes a little longer to get there.</p>
+                </div>
+                <div class="route-mode-card reveal">
+                    <div class="route-mode-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18c3-8 6-12 8-12s3 5 3 9 2 5 5 1"/><circle cx="4" cy="18" r="1.4"/><circle cx="20" cy="16" r="1.4"/></svg></div>
+                    <h3>Scenic</h3>
+                    <p>Routes you along the waterfront, parks, and the blocks worth riding slow for.</p>
+                </div>
+                <div class="route-mode-card reveal">
+                    <div class="route-mode-card__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></div>
+                    <h3>Fast</h3>
+                    <p>The shortest ride between two docks, tuned for getting there and dropping off quickly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="how-it-works">
         <div class="wrap">
             <div class="section__header reveal">
                 <span class="section__eyebrow">How it works</span>
@@ -189,7 +235,75 @@
         </div>
     </section>
 
-    <section class="section section-alt" id="pricing">
+    <section class="section" id="dock-alerts">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Never get stranded</span>
+                <h2 class="section__title">Know a dock is filling up before you get there</h2>
+                <p class="section__desc">Pigeon watches your destination station while you ride and warns you the moment it starts running out of room.</p>
+            </div>
+            <div class="dock-alert-demo reveal dock-countdown" data-counts="6,4,2,0">
+                <div class="dock-alert-demo__station">
+                    <span class="dock-alert-demo__name">Union Sq E &amp; 16th St<small>Your destination</small></span>
+                    <div class="dock-alert-demo__gauge">
+                        <span class="dock-countdown__num">6</span>
+                        <span class="dock-alert-demo__gauge-label">open docks</span>
+                    </div>
+                </div>
+                <div class="dock-alert-demo__track">
+                    <div class="dock-alert-demo__track-fill"></div>
+                </div>
+                <div class="dock-countdown__alert">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg>
+                    Dock filling up. Pigeon suggests a nearby station.
+                </div>
+            </div>
+            <p class="example-caption">Example station, shown for illustration.</p>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="ride-diary">
+        <div class="wrap">
+            <div class="section__header reveal">
+                <span class="section__eyebrow">Your rides, remembered</span>
+                <h2 class="section__title">A lasting diary of everywhere you've ridden</h2>
+                <p class="section__desc">Every ride is saved automatically, so the city you've covered on two wheels is always there to look back on.</p>
+            </div>
+            <ul class="ride-diary reveal">
+                <li class="ride-diary__item">
+                    <div class="ride-diary__squiggle"><svg viewBox="0 0 72 44" aria-hidden="true"><path d="M4 36 Q20 8 36 24 T68 10"/></svg></div>
+                    <div class="ride-diary__meta">
+                        <span class="ride-diary__route">Central Park loop</span>
+                        <span class="ride-diary__stats">4.2 mi · 22 min</span>
+                    </div>
+                </li>
+                <li class="ride-diary__item">
+                    <div class="ride-diary__squiggle"><svg viewBox="0 0 72 44" aria-hidden="true"><path d="M4 12 Q24 40 40 20 T68 34"/></svg></div>
+                    <div class="ride-diary__meta">
+                        <span class="ride-diary__route">Hudson River Greenway</span>
+                        <span class="ride-diary__stats">6.8 mi · 34 min</span>
+                    </div>
+                </li>
+                <li class="ride-diary__item">
+                    <div class="ride-diary__squiggle"><svg viewBox="0 0 72 44" aria-hidden="true"><path d="M4 30 Q16 6 32 18 Q48 30 68 8"/></svg></div>
+                    <div class="ride-diary__meta">
+                        <span class="ride-diary__route">Williamsburg Bridge crossing</span>
+                        <span class="ride-diary__stats">3.1 mi · 16 min</span>
+                    </div>
+                </li>
+                <li class="ride-diary__item">
+                    <div class="ride-diary__squiggle"><svg viewBox="0 0 72 44" aria-hidden="true"><path d="M4 20 Q22 4 38 22 T68 26"/></svg></div>
+                    <div class="ride-diary__meta">
+                        <span class="ride-diary__route">Brooklyn Bridge Park loop</span>
+                        <span class="ride-diary__stats">5.4 mi · 28 min</span>
+                    </div>
+                </li>
+            </ul>
+            <p class="example-caption">Example rides, shown for illustration.</p>
+        </div>
+    </section>
+
+    <section class="section" id="pricing">
         <div class="wrap">
             <div class="section__header reveal">
                 <span class="section__eyebrow">Pricing</span>
@@ -207,8 +321,16 @@
                         <li>Basic routing</li>
                         <li>No account required</li>
                     </ul>
-                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <div class="price-card__cta">
+                        <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                            <!-- TODO: replace with real App Store URL -->
+                            <span class="appstore-badge__glyph"></span>
+                            <span class="appstore-badge__text">
+                                <span class="appstore-badge__line1">Download on the</span>
+                                <span class="appstore-badge__line2">App Store</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="price-card price-card--highlight reveal">
                     <span class="price-card__badge">Most flexible</span>
@@ -221,8 +343,16 @@
                         <li>Dock alerts</li>
                         <li>Trail publishing</li>
                     </ul>
-                    <a href="#" class="btn btn-accent btn-block"><span class="apple-mark"></span> Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <div class="price-card__cta">
+                        <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                            <!-- TODO: replace with real App Store URL -->
+                            <span class="appstore-badge__glyph"></span>
+                            <span class="appstore-badge__text">
+                                <span class="appstore-badge__line1">Download on the</span>
+                                <span class="appstore-badge__line2">App Store</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div class="price-card reveal">
                     <h3>Pigeon Pro Annual</h3>
@@ -233,14 +363,22 @@
                         <li>Best value over a year</li>
                         <li>Cancel anytime</li>
                     </ul>
-                    <a href="#" class="btn btn-outline btn-block">Download on the App Store</a>
-                    <!-- TODO: replace with real App Store URL -->
+                    <div class="price-card__cta">
+                        <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                            <!-- TODO: replace with real App Store URL -->
+                            <span class="appstore-badge__glyph"></span>
+                            <span class="appstore-badge__text">
+                                <span class="appstore-badge__line1">Download on the</span>
+                                <span class="appstore-badge__line2">App Store</span>
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="faq">
+    <section class="section section-alt" id="faq">
         <div class="wrap">
             <div class="section__header reveal">
                 <span class="section__eyebrow">FAQ</span>
@@ -318,8 +456,14 @@
         <div class="final-cta reveal">
             <h2>Never get stuck circling a full dock again.</h2>
             <p>Download Pigeon free and see live counts at every station near you.</p>
-            <a href="#" class="btn btn-accent"><span class="apple-mark"></span> Download on the App Store</a>
-            <!-- TODO: replace with real App Store URL -->
+            <a href="#" class="appstore-badge" aria-label="Download on the App Store">
+                <!-- TODO: replace with real App Store URL -->
+                <span class="appstore-badge__glyph"></span>
+                <span class="appstore-badge__text">
+                    <span class="appstore-badge__line1">Download on the</span>
+                    <span class="appstore-badge__line2">App Store</span>
+                </span>
+            </a>
         </div>
     </section>
 
