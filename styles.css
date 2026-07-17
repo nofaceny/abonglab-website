@@ -748,6 +748,12 @@ body {
     transition: transform 0.4s ease;
 }
 
+.phone-shot {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .app-card:hover .phone-mockup {
     transform: perspective(800px) rotateY(-6deg) rotateX(1deg);
 }
